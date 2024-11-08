@@ -61,3 +61,52 @@ function ex10(){
     let n = +prompt("Enter a number");
     n%2==0 ? alert("Even") : alert("Odd");
 }
+
+//++++++++++++ additional
+//1
+function powerREC(x, y, x1=x){
+    if (y == 1){
+        console.log(x);
+        return x;
+    }
+    return powerREC(x*x1, y-1, x)
+}
+//2
+function BiggestDivid(a, b){
+    if (a==b){
+        return b;
+    }
+    else if (b != 0 && a != 0) {
+		if (a > b) return BiggestDivid(a%b,b);
+		return BiggestDivid(a, b % a);
+	}
+	return a + b;
+}
+//3
+function BiggestN(num, d = 10**(num.toString().length - 1), m = Math.floor((num/d)%10)){
+    m > Math.floor((num/d*10)%10)? m = m : m = Math.floor((num/d*10)%10);
+    if (d == 1){
+        console.log(m);
+        return m;
+    }
+    return BiggestN(num, d/10, m);
+}
+//4
+function ifPrime(n, m = n-1){
+    if (m == 1) return true;
+    if (n%m == 0) return false;
+    return ifPrime(n, --m);
+}
+//5
+function allMultip(n, j=2, res='1', n1 = n){
+    if (ifPrime(n)) {console.log(`1*${n}`); return `1*${n}`;}
+    if (eval(res) === n) {console.log(res); return res;}
+    if (n1 % j === 0) return allMultip(n, j, res + `*${j}`, n1/j);
+    return allMultip(n, j + 1, res, n1);
+}
+//6
+function fibonacci(n){
+    if (n===1 || n===2) return 1;
+    else return fibonacci(n-1) + fibonacci(n-2);
+}
+console.log(fibonacci(6));
