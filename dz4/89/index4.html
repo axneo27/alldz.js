@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .editor{
+            display: flex;
+            justify-content: center;
+            width: 50%;
+            justify-self: center;
+            margin: 50px;
+        }
+        .table{
+            display: flex;
+            justify-content: center;
+            width: 50%;
+            justify-self: center;
+            margin: 50px;
+            flex-direction: column;
+        }
+        table, th, td {
+            border: 1px solid black;
+            text-align: center;
+        }
+        th{
+            width: 100px;
+            height:30px;
+        }
+        button{
+            width: 100px;
+            margin:auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="editor">
+        <div id="textArea">
+            <p id="t">Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                Dolorem laboriosam porro doloribus non! Adipisci nemo maiores sapiente veritatis! Nam, ad.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, hic.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita molestias voluptates consequatur tempore!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita molestias voluptates consequatur tempore!</p>
+        </div>
+    </div>
+    <div class="table">
+        <table>
+            <tr>
+                <th id="name">Firstname</th>
+                <th id="lastname">Lastname</th>
+                <th id="age">Age</th>
+                <th id="company">Company</th>
+            </tr>
+            <tr>
+                <td>Xleksiy</td>
+                <td>Trofymchuk</td>
+                <td>99</td>
+                <td>Apple</td>
+            </tr>
+            <tr>
+                <td>Bober</td>
+                <td>Bobrovych</td>
+                <td>306</td>
+                <td>Microsoft</td>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>27</td>
+                <td>Linux</td>
+            </tr>
+        </table>
+        <button id="Sname">sort by name</button>
+        <button id="Slastname">sort by lastname</button>
+        <button id="Sage">sort by age</button>
+        <button id="Scompany">sort by company</button>
+    </div>
+</body>
+<script src="script89.js"></script>
+</html>
